@@ -17,21 +17,35 @@ body {
     align-items: center;
 }
 .clock {
+    text-align: center;
+
     width: fit-content;
     margin: auto;
     padding: 10px;
-    border-radius: 2px;
+    border-radius: 20px;
     color: white;
     background-color: #3b393f2d;
 }
 .clock h1 {
-    display: inline-block;
+    text-align: center;
+    display: block;
     margin: 0 10px;
     font-weight: bold;
     font-size: 100px;
 }
+#city {
+    border-top: 1px solid white;
+}
+
 #bar1 {
     animation: color-change 2.5s infinite;
+    display: inline-block;
+   
+
+}
+#hour,#min {
+    display: inline-block;
+    
 }
 
 

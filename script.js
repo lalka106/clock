@@ -29,13 +29,12 @@ function Time() {
 
 
 
-
-function getWeather(position){
+var city = prompt("Где вы находитесь?", "Минск");;
+function getWeather(){
     // let lat = position.coords.latitude;
     // let long = position.coords.longitude;
    
-    let city = "Minsk";
-    let API_KEY = "d982b206b7125a363d94918d08ebf560";
+    let API_KEY = "460891ad578b490b7a431c0e09a80947";
     let baseURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${API_KEY}`;
     // let baseURL = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${API_KEY}`;
     // $.get(baseURL,function(res){
@@ -54,9 +53,13 @@ axios.get(baseURL).then(res => {
     $('#temp').html(`${res.data.main.temp}°`);
     $('#city').html(`${res.data.name}`);
     $('#condition').html(`${res.data.main.humidity}%`);
+    $('#weather').html(`${res.data.weather[0].description}`);
  })
 
 }
-
 getWeather();
+// setInterval(() => {
+//     getWeather()
+// }, 2000);
+
 // getLocation();
