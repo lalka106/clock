@@ -1,2 +1,2 @@
 # clock
-Часы и погодо на JS/HTML/CSS
+Часы и погода на JS/HTML/CSS
